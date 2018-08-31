@@ -67,15 +67,15 @@ LAYER@git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-virt.git;branch=r
 LAYER@git://gitcgx.mvista.com/cgx/CGX2.4/bsps/meta-x86-generic-4.14.git;branch=rocko-cgx \
 MACHINE@x86-generic-64 \
 DISTRO@mvista-cgx \
-BUILDID@180704071608 \
-URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180704071608 \
+BUILDID@180830111632 \
+URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632 \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/kernel/linux-mvista-2.4;branch=mvl-4.14/msd.cgx;meta=MV_KERNEL \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/github-mirror/yocto-kernel-cache.git;branch=yocto-4.14;meta=MV_KERNELCACHE \
 "
-BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180704071608
+BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632
 SOURCE_MIRROR_URL='http://cgxcollective.mvista.com/cgx2.4/dev/cgx2.4-sources/'
 PROTECTED_SOURCE_URL='http://cgxcollective.mvista.com/cgx2.4/dev/source-mirror'
-SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180704071608/sstate-cache/'
+SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632/sstate-cache/'
 TOPDIR=$(dirname $THIS_SCRIPT)
 buildtar=""
 URL=""
@@ -110,7 +110,26 @@ if [ ! -e $TOPDIR/.drop ] ; then
       pushd $TOPDIR 2>/dev/null 1>/dev/null
          git config pull.rebase True
          git submodule init || $EXIT 1
-         git submodule update --remote || $EXIT 1
+	 if [ -z "$GIT_RETRIES" ] ; then
+            GIT_RETRIES=5
+	 fi
+	 if [ -z "$GIT_DELAY" ] ; then
+            GIT_DELAY=10
+	 fi
+         GIT_COUNT=1
+         while [ $GIT_COUNT -lt $GIT_RETRIES ] ; do
+            git submodule update --remote
+            if [ $? -eq 0 ] ; then
+                 GIT_RETRIES=0
+                 break
+            fi
+            GIT_COUNT=$(($GIT_COUNT + 1))
+	    echo "git submodule update failed, sleeping for $GIT_DELAY seconds and retrying"
+            sleep $GIT_DELAY
+         done
+         if [ $GIT_RETRIES != 0 ] ; then
+            $EXIT 1
+         fi
       popd  2>/dev/null 1>/dev/null
    else
       pushd $TOPDIR 2>/dev/null >/dev/null
@@ -217,6 +236,7 @@ if [ -n "$SOURCE_MIRROR_URL" ] ; then
    fi
    echo "SOURCE_MIRROR_URL = '$SOURCE_MIRROR_URL'" >> conf/local-content.conf
    echo >> conf/local-content.conf
+   SOURCE_MIRROR_URL=""
 fi
 if [ -n "$PROTECTED_SOURCE_URL" ] ; then 
    if [ -z "$(echo $PROTECTED_SOURCE_URL | grep "://")" ] ; then
@@ -225,6 +245,7 @@ if [ -n "$PROTECTED_SOURCE_URL" ] ; then
    fi
    echo "PROTECTED_SOURCE_URL = '$PROTECTED_SOURCE_URL'" >> conf/local-content.conf
    echo >> conf/local-content.conf
+   PROTECTED_SOURCE_URL=""
 fi
 
 if [ -n "$SSTATE_MIRRORS" ] ; then
@@ -232,7 +253,9 @@ if [ -n "$SSTATE_MIRRORS" ] ; then
       # Assume file
       SSTATE_MIRRORS="file://$SSTATE_MIRRORS"
    fi
-        echo "SSTATE_MIRRORS = 'file://.*  $SSTATE_MIRRORS/PATH \n '" >> conf/local-content.conf
+   echo "SSTATE_MIRRORS = 'file://.*  $SSTATE_MIRRORS/PATH \n '" >> conf/local-content.conf
+   echo >> conf/local-content.conf
+   SSTATE_MIRRORS=""
 fi
 
 export -n BB_NO_NETWORK

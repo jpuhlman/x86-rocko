@@ -291,10 +291,29 @@ for REPO_BRANCH in $BRANCHES; do
                       git fetch --all || exit 1
                    popd 2>/dev/null 1>/dev/null
                 else
-                   if [ "$branch" == "master" ] ; then
-                      git clone --no-hardlinks --mirror --bare --shared $mirroredRepo $subdir/$repoDir.git|| exit 1
-                   else
-                      git clone --no-hardlinks --branch=$branch --mirror --bare --shared $mirroredRepo $subdir/$repoDir.git || exit 1
+                   if [ -z "$GIT_RETRIES" -o "$GIT_RETRIES" = 0 ] ; then
+                      GIT_RETRIES=5
+                   fi
+                   if [ -z "$GIT_DELAY" ] ; then
+                      GIT_DELAY=10
+                   fi
+                   GIT_COUNT=1
+                   while [ $GIT_COUNT -lt $GIT_RETRIES ] ; do
+                      if [ "$branch" == "master" ] ; then
+                         git clone --no-hardlinks --mirror --bare --shared $mirroredRepo $subdir/$repoDir.git
+                      else
+                         git clone --no-hardlinks --branch=$branch --mirror --bare --shared $mirroredRepo $subdir/$repoDir.git
+                      fi
+                      if [ $? -eq 0 ] ; then
+                         GIT_RETRIES=0
+                         break
+                      fi
+                      GIT_COUNT=$(($GIT_COUNT + 1))
+                      echo "git clone failed, sleeping for $GIT_DELAY seconds and retrying"
+                      sleep $GIT_DELAY
+                   done
+                   if [ $GIT_RETRIES != 0 ] ; then
+                      $EXIT 1
                    fi
                 fi
                 pushd $subdir/$repoDir.git 2>/dev/null 1>/dev/null
@@ -317,7 +336,7 @@ for REPO_BRANCH in $BRANCHES; do
      mkdir -p $MIRROR_DIR/tools
      export DOWNLOAD_LOCATION=$MIRROR_DIR/tools
      pushd $MIRROR_DIR
-     BUILDTOOLS_INSTALL=0 bash -x $PROJECT_LOCATION/bin/fetch-buildtools || $EXIT 1
+     BUILDTOOLS_INSTALL=0 bash -x $PROJECT_LOCATION/bin/fetch-buildtools || exit 1
      popd
      sed -i $CLONE/setup.sh -e "s,^buildtar=\"\",buildtar=\"$(cat $MIRROR_DIR/tools/.buildtools)\","
      sed -i $CLONE/setup.sh -e "s,^BUILD_TOOLS_LOCATION=.*$,BUILD_TOOLS_LOCATION=$MIRROR_URL/tools/,"
@@ -343,7 +362,12 @@ for REPO_BRANCH in $BRANCHES; do
      sed -i $CLONE/setup.sh -e 's,^PROTECTED_SOURCE_URL=.*,,'
   fi
   if [ "x$SSTATE_URL" != "x" ] ; then
-    sed -i $CLONE/setup.sh -e "s,^SSTATE_MIRRORS=.*,SSTATE_MIRRORS=$SSTATE_URL,"
+    if [ -z "$(grep ^SSTATE_MIRRORS= $CLONE/setup.sh)" ] ; then
+      sed -i $CLONE/setup.sh -e 's,TOPDIR=$(dirname $THIS_SCRIPT),REPLACE_ME\nTOPDIR=$(dirname $THIS_SCRIPT),'
+    else
+      sed -i $CLONE/setup.sh -e 's,^SSTATE_MIRRORS=.*,REPLACE_ME,'
+    fi
+    sed -i $CLONE/setup.sh -e "s,REPLACE_ME,SSTATE_MIRRORS=$SSTATE_URL,"
   elif [ "$KEEP_SSTATE_URL" != "1" ] ; then
     sed -i $CLONE/setup.sh -e "s,^SSTATE_MIRRORS=.*,,"
   fi
@@ -356,7 +380,7 @@ for REPO_BRANCH in $BRANCHES; do
   popd
 done
 if [ "$MIRROR_SOURCES" = "1" ] ; then
-   $PROJECT_LOCATION/bin/fetch-sources --mirror-dir $MIRROR_DIR
+   $PROJECT_LOCATION/bin/fetch-sources --mirror-dir $MIRROR_DIR || exit 1
 fi
 pushd $BARE 2>/dev/null 1>/dev/null
 git update-server-info

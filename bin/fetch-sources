@@ -48,7 +48,7 @@ while [ "x$1" != "x" ]; do
                    exit 1
                 fi
                 BUILD_DIR=$1
-                BUILD_DIR=$(readlink -f $DOWNLOAD_DIR)
+                BUILD_DIR=$(readlink -f $BUILD_DIR)
                 shift
                 ;;
               --mirror-dir)
@@ -72,7 +72,7 @@ echo $DOWNLOAD_DIR > $PROJECT_LOCATION/.download-dir
 export DL_DIR=$DOWNLOAD_DIR
 export BB_ENV_EXTRAWHITE="DL_DIR"
 source $PROJECT_LOCATION/setup.sh $BUILD_DIR
-bitbake -k -c fetchall $DEFAULT_SOURCE_TARGET 
+bitbake -k -c fetchall $DEFAULT_SOURCE_TARGET  || exit 1
 
 if [ "x$MIRROR_DIR" != "x" ] ; then
    echo -n "copying downloaded files to mirror(this can take some time)...."
