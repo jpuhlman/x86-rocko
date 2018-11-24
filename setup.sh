@@ -67,15 +67,15 @@ LAYER@git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-virt.git;branch=r
 LAYER@git://gitcgx.mvista.com/cgx/CGX2.4/bsps/meta-x86-generic-4.14.git;branch=rocko-cgx \
 MACHINE@x86-generic-64 \
 DISTRO@mvista-cgx \
-BUILDID@180830111632 \
-URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632 \
+BUILDID@181123010038 \
+URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/181123010038 \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/kernel/linux-mvista-2.4;branch=mvl-4.14/msd.cgx;meta=MV_KERNEL \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/github-mirror/yocto-kernel-cache.git;branch=yocto-4.14;meta=MV_KERNELCACHE \
 "
-BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632
+BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/181123010038
 SOURCE_MIRROR_URL='http://cgxcollective.mvista.com/cgx2.4/dev/cgx2.4-sources/'
 PROTECTED_SOURCE_URL='http://cgxcollective.mvista.com/cgx2.4/dev/source-mirror'
-SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/180830111632/sstate-cache/'
+SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/181123010038/sstate-cache/'
 TOPDIR=$(dirname $THIS_SCRIPT)
 buildtar=""
 URL=""
