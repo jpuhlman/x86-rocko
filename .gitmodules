@@ -1,92 +1,92 @@
 [submodule "sources/linux-mvista-2.4"]
 	path = sources/linux-mvista-2.4
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/source-repos/linux-mvista-2.4.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/source-repos/linux-mvista-2.4.git
 	branch = mvl-4.14/msd.cgx
 [submodule "sources/yocto-kernel-cache"]
 	path = sources/yocto-kernel-cache
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/source-repos/yocto-kernel-cache.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/source-repos/yocto-kernel-cache.git
 	branch = yocto-4.14
 [submodule "layers/poky"]
 	path = layers/poky
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/poky.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/poky.git
 	branch = rocko
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-openembedded.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-openembedded.git
 	branch = rocko
 [submodule "layers/meta-clang"]
 	path = layers/meta-clang
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-clang.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-clang.git
 	branch = rocko
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-virtualization.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-virtualization.git
 	branch = rocko
 [submodule "layers/meta-arm64-ilp32"]
 	path = layers/meta-arm64-ilp32
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-arm64-ilp32.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-arm64-ilp32.git
 	branch = rocko
 [submodule "layers/meta-qa"]
 	path = layers/meta-qa
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-qa.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-qa.git
 	branch = rocko
 [submodule "layers/meta-montavista-cgx"]
 	path = layers/meta-montavista-cgx
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-cgx.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-cgx.git
 	branch = rocko
 [submodule "layers/meta-selinux"]
 	path = layers/meta-selinux
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-selinux.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-selinux.git
 	branch = rocko
 [submodule "layers/meta-security"]
 	path = layers/meta-security
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-security.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-security.git
 	branch = rocko
 [submodule "layers/meta-cgl"]
 	path = layers/meta-cgl
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-cgl.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-cgl.git
 	branch = rocko
 [submodule "layers/meta-cloud-services"]
 	path = layers/meta-cloud-services
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-cloud-services.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-cloud-services.git
 	branch = rocko
 [submodule "layers/meta-montavista-cgl"]
 	path = layers/meta-montavista-cgl
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-cgl.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-cgl.git
 	branch = rocko
 [submodule "layers/meta-java"]
 	path = layers/meta-java
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-java.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-java.git
 	branch = rocko-sumo
 [submodule "layers/meta-montavista-iot"]
 	path = layers/meta-montavista-iot
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-iot.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-iot.git
 	branch = rocko
 [submodule "layers/meta-qt5"]
 	path = layers/meta-qt5
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-qt5.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-qt5.git
 	branch = rocko
 [submodule "layers/meta-montavista-graphics"]
 	path = layers/meta-montavista-graphics
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-graphics.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-graphics.git
 	branch = rocko
 [submodule "layers/meta-montavista-security"]
 	path = layers/meta-montavista-security
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-security.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-security.git
 	branch = rocko
 [submodule "layers/meta-dpdk"]
 	path = layers/meta-dpdk
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-dpdk.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-dpdk.git
 	branch = rocko
 [submodule "layers/meta-montavista-dataplane"]
 	path = layers/meta-montavista-dataplane
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-dataplane.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-dataplane.git
 	branch = rocko
 [submodule "layers/meta-montavista-virt"]
 	path = layers/meta-montavista-virt
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-montavista-virt.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-montavista-virt.git
 	branch = rocko
 [submodule "layers/meta-x86-generic-4.14"]
 	path = layers/meta-x86-generic-4.14
-	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/remote-layers/meta-x86-generic-4.14.git
+	url = http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/remote-layers/meta-x86-generic-4.14.git
 	branch = rocko-cgx

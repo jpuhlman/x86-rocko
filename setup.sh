@@ -70,15 +70,15 @@ LAYER@git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-virt.git;branch=r
 LAYER@git://gitcgx.mvista.com/cgx/CGX2.4/bsps/meta-x86-generic-4.14.git;branch=rocko-cgx \
 MACHINE@x86-generic-64 \
 DISTRO@mvista-cgx \
-BUILDID@190301010047 \
-URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047 \
+BUILDID@190606191305 \
+URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305 \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/kernel/linux-mvista-2.4;branch=mvl-4.14/msd.cgx;meta=MV_KERNEL \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/github-mirror/yocto-kernel-cache.git;branch=yocto-4.14;meta=MV_KERNELCACHE \
 "
-BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047
+BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305
 SOURCE_MIRROR_URL='http://cgxcollective.mvista.com/cgx2.4/dev/cgx2.4-sources/'
 PROTECTED_SOURCE_URL='http://cgxcollective.mvista.com/cgx2.4/dev/source-mirror'
-SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/sstate-cache/'
+SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/sstate-cache/'
 TOPDIR=$(dirname $THIS_SCRIPT)
 buildtar=""
 URL=""
@@ -113,7 +113,7 @@ if [ ! -e $TOPDIR/.drop ] ; then
       pushd $TOPDIR 2>/dev/null 1>/dev/null
          git config pull.rebase True
          git submodule init || $EXIT 1
-	 if [ -z "$GIT_RETRIES" ] ; then
+	 if [ -z "$GIT_RETRIES" -o "$GIT_RETRIES" = "0" ] ; then
             GIT_RETRIES=5
 	 fi
 	 if [ -z "$GIT_DELAY" ] ; then

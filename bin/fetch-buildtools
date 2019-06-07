@@ -69,7 +69,7 @@ if [ ! -d buildtools ] ; then
       if [ -z "$BUILD_TOOLS_LOCATION" ] ; then
          yoctoDownloads=http://downloads.yoctoproject.org/releases/yocto/
          check_lynx || $EXIT 1
-         latestRelease=$(echo -n $(lynx -dump $yoctoDownloads -nolist | cut -d / -f 1 | grep yocto- | grep -v yocto-2.5 | tail -n 1))
+         latestRelease=$(echo -n $(lynx -dump $yoctoDownloads -nolist | cut -d / -f 1 | grep yocto- | grep yocto-2.4 | tail -n 1))
          BUILD_TOOLS_LOCATION=$yoctoDownloads/$latestRelease/buildtools/
          releaseDir="$latestRelease"
          releaseVersion="$(echo $latestRelease | cut -d - -f 2)"

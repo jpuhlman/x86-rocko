@@ -5,7 +5,7 @@ Montavista Software, LLC. release of x86-generic-64.
 How to use:
 ==========
 ```
-git clone --recursive http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190301010047/x86-generic-64-4.14-2.4-cgx
+git clone --recursive http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190606191305/x86-generic-64-4.14-2.4-cgx
 cd x86-generic-64-4.14-2.4-cgx
 source setup.sh
 ```
