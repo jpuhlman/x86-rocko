@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote fetch="http://cgxcollective.mvista.com" name="cgxcollective.mvista.com"/>
+	<remote fetch="https://support.mvista.com" name="support.mvista.com"/>
 
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/poky.git" remote="cgxcollective.mvista.com" path="layers/poky" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-openembedded.git" remote="cgxcollective.mvista.com" path="layers/meta-openembedded" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-clang.git" remote="cgxcollective.mvista.com" path="layers/meta-clang" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-virtualization.git" remote="cgxcollective.mvista.com" path="layers/meta-virtualization" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-arm64-ilp32.git" remote="cgxcollective.mvista.com" path="layers/meta-arm64-ilp32" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-qa.git" remote="cgxcollective.mvista.com" path="layers/meta-qa" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-cgx" remote="cgxcollective.mvista.com" path="layers/meta-montavista-cgx" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-selinux.git" remote="cgxcollective.mvista.com" path="layers/meta-selinux" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-security.git" remote="cgxcollective.mvista.com" path="layers/meta-security" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-cgl.git" remote="cgxcollective.mvista.com" path="layers/meta-cgl" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-cloud-services.git" remote="cgxcollective.mvista.com" path="layers/meta-cloud-services" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-cgl" remote="cgxcollective.mvista.com" path="layers/meta-montavista-cgl" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-java.git" remote="cgxcollective.mvista.com" path="layers/meta-java" revision="rocko-sumo"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-iot" remote="cgxcollective.mvista.com" path="layers/meta-montavista-iot" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-qt5.git" remote="cgxcollective.mvista.com" path="layers/meta-qt5" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-graphics" remote="cgxcollective.mvista.com" path="layers/meta-montavista-graphics" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-security" remote="cgxcollective.mvista.com" path="layers/meta-montavista-security" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-dpdk.git" remote="cgxcollective.mvista.com" path="layers/meta-dpdk" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-dataplane.git" remote="cgxcollective.mvista.com" path="layers/meta-montavista-dataplane" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-montavista-virt.git" remote="cgxcollective.mvista.com" path="layers/meta-montavista-virt" revision="rocko"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/remote-layers/meta-x86-generic-4.14.git" remote="cgxcollective.mvista.com" path="layers/meta-x86-generic-4.14" revision="rocko-cgx"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/source-repos/linux-mvista-2.4" remote="cgxcollective.mvista.com" path="sources/linux-mvista-2.4" revision="mvl-4.14/msd.cgx"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/source-repos/yocto-kernel-cache.git" remote="cgxcollective.mvista.com" path="sources/yocto-kernel-cache" revision="yocto-4.14"/>
-	<project name="cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/x86-generic-64-4.14-2.4-cgx" remote="cgxcollective.mvista.com" path="." revision="master"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/poky.git" remote="support.mvista.com" path="layers/poky" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-openembedded.git" remote="support.mvista.com" path="layers/meta-openembedded" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-clang.git" remote="support.mvista.com" path="layers/meta-clang" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-virtualization.git" remote="support.mvista.com" path="layers/meta-virtualization" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-arm64-ilp32.git" remote="support.mvista.com" path="layers/meta-arm64-ilp32" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-qa.git" remote="support.mvista.com" path="layers/meta-qa" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-cgx.git" remote="support.mvista.com" path="layers/meta-montavista-cgx" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-selinux.git" remote="support.mvista.com" path="layers/meta-selinux" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-security.git" remote="support.mvista.com" path="layers/meta-security" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-cgl.git" remote="support.mvista.com" path="layers/meta-cgl" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-cloud-services.git" remote="support.mvista.com" path="layers/meta-cloud-services" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-cgl.git" remote="support.mvista.com" path="layers/meta-montavista-cgl" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-java.git" remote="support.mvista.com" path="layers/meta-java" revision="rocko-sumo"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-iot.git" remote="support.mvista.com" path="layers/meta-montavista-iot" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-qt5.git" remote="support.mvista.com" path="layers/meta-qt5" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-graphics.git" remote="support.mvista.com" path="layers/meta-montavista-graphics" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-security.git" remote="support.mvista.com" path="layers/meta-montavista-security" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-dpdk.git" remote="support.mvista.com" path="layers/meta-dpdk" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-dataplane.git" remote="support.mvista.com" path="layers/meta-montavista-dataplane" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-virt.git" remote="support.mvista.com" path="layers/meta-montavista-virt" revision="rocko"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-x86-generic-4.14.git" remote="support.mvista.com" path="layers/meta-x86-generic-4.14" revision="rocko-cgx"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/source-repos/linux-mvista-2.4.git" remote="support.mvista.com" path="sources/linux-mvista-2.4" revision="mvl-4.14/msd.cgx"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/source-repos/yocto-kernel-cache.git" remote="support.mvista.com" path="sources/yocto-kernel-cache" revision="yocto-4.14"/>
+	<project name="cgx2.4/x86-generic-64-4.14-2.4/x86-generic-64-4.14-2.4-cgx.git" remote="support.mvista.com" path="." revision="master"/>
 </manifest>

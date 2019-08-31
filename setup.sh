@@ -71,16 +71,16 @@ LAYER@git://gitcgx.mvista.com/cgx/CGX2.4/bsps/meta-x86-generic-4.14.git;branch=r
 MACHINE@x86-generic-64 \
 DISTRO@mvista-cgx \
 BUILDID@190830115321 \
-URL@http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321 \
+URL@https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4 \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/kernel/linux-mvista-2.4;branch=mvl-4.14/msd.cgx;meta=MV_KERNEL \
 SOURCE@git://gitcgx.mvista.com/cgx/CGX2.4/github-mirror/yocto-kernel-cache.git;branch=yocto-4.14;meta=MV_KERNELCACHE \
 "
-BUILD_TOOLS_LOCATION=http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321
-SOURCE_MIRROR_URL='http://cgxcollective.mvista.com/cgx2.4/dev/cgx2.4-sources/'
-PROTECTED_SOURCE_URL='http://cgxcollective.mvista.com/cgx2.4/dev/source-mirror'
-SSTATE_MIRRORS='http://cgxcollective.mvista.com/cgx2.4/dev/msdbuilds/x86-generic-64-4.14-2.4/190830115321/sstate-cache/'
+BUILD_TOOLS_LOCATION=https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/tools/
+SOURCE_MIRROR_URL=https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/source-mirror
+PROTECTED_SOURCE_URL=https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/source-mirror
+
 TOPDIR=$(dirname $THIS_SCRIPT)
-buildtar=""
+buildtar="x86_64-buildtools-nativesdk-standalone-2.4.0.sh"
 URL=""
 
 for config in $REPO_CONFIG; do
