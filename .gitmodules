@@ -1,92 +1,92 @@
 [submodule "sources/linux-mvista-2.4"]
 	path = sources/linux-mvista-2.4
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/source-repos/linux-mvista-2.4.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/linux-mvista-2.4
 	branch = mvl-4.14/msd.cgx
 [submodule "sources/yocto-kernel-cache"]
 	path = sources/yocto-kernel-cache
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/source-repos/yocto-kernel-cache.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/yocto-kernel-cache
 	branch = yocto-4.14
 [submodule "layers/poky"]
 	path = layers/poky
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/poky.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/poky
 	branch = rocko
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-openembedded.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded
 	branch = rocko
 [submodule "layers/meta-clang"]
 	path = layers/meta-clang
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-clang.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-clang
 	branch = rocko
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-virtualization.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-virtualization
 	branch = rocko
 [submodule "layers/meta-arm64-ilp32"]
 	path = layers/meta-arm64-ilp32
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-arm64-ilp32.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-arm64-ilp32
 	branch = rocko
 [submodule "layers/meta-qa"]
 	path = layers/meta-qa
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-qa.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-qa
 	branch = rocko
 [submodule "layers/meta-montavista-cgx"]
 	path = layers/meta-montavista-cgx
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-cgx.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgx
 	branch = rocko
 [submodule "layers/meta-selinux"]
 	path = layers/meta-selinux
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-selinux.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-selinux
 	branch = rocko
 [submodule "layers/meta-security"]
 	path = layers/meta-security
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-security.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-security
 	branch = rocko
 [submodule "layers/meta-cgl"]
 	path = layers/meta-cgl
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-cgl.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-cgl
 	branch = rocko
 [submodule "layers/meta-cloud-services"]
 	path = layers/meta-cloud-services
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-cloud-services.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-cloud-services
 	branch = rocko
 [submodule "layers/meta-montavista-cgl"]
 	path = layers/meta-montavista-cgl
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-cgl.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgl
 	branch = rocko
 [submodule "layers/meta-java"]
 	path = layers/meta-java
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-java.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-java
 	branch = rocko-sumo
 [submodule "layers/meta-montavista-iot"]
 	path = layers/meta-montavista-iot
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-iot.git
+	url = git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-iot
 	branch = rocko
 [submodule "layers/meta-qt5"]
 	path = layers/meta-qt5
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-qt5.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-qt5
 	branch = rocko
 [submodule "layers/meta-montavista-graphics"]
 	path = layers/meta-montavista-graphics
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-graphics.git
+	url = git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-graphics
 	branch = rocko
 [submodule "layers/meta-montavista-security"]
 	path = layers/meta-montavista-security
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-security.git
+	url = git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-security
 	branch = rocko
 [submodule "layers/meta-dpdk"]
 	path = layers/meta-dpdk
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-dpdk.git
+	url = https://github.com/MontaVista-OpenSourceTechnology/meta-dpdk
 	branch = rocko
 [submodule "layers/meta-montavista-dataplane"]
 	path = layers/meta-montavista-dataplane
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-dataplane.git
+	url = git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-dataplane.git
 	branch = rocko
 [submodule "layers/meta-montavista-virt"]
 	path = layers/meta-montavista-virt
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-montavista-virt.git
+	url = git://gitcgx.mvista.com/cgx/CGX/mvl-meta/meta-montavista-virt.git
 	branch = rocko
 [submodule "layers/meta-x86-generic-4.14"]
 	path = layers/meta-x86-generic-4.14
-	url = https://support.mvista.com/cgx2.4/x86-generic-64-4.14-2.4/remote-layers/meta-x86-generic-4.14.git
+	url = git://gitcgx.mvista.com/cgx/CGX2.4/bsps/meta-x86-generic-4.14.git
 	branch = rocko-cgx
